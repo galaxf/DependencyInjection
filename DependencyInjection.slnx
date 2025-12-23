@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="DotNetCore/DotNetCore.csproj" />
+  <Project Path="DotNetFramework/DotNetFramework.csproj" />
+</Solution>

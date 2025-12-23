@@ -1,0 +1,45 @@
+# Build results
+bin/
+obj/
+*.dll
+*.exe
+*.exe.config
+
+# Visual Studio
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+.vscode/
+
+# NuGet
+packages/
+*.nupkg
+*.snupkg
+.nuget/
+
+# Build logs
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# User-specific files
+*.suo
+*.VC.db
+
+# ReSharper
+.idea/
+*.sln.iml
+
+# Test Results
+TestResults/
+
+# Rider
+.idea/
+*.sln.iml
+
+# Local environment
+.env
+.env.local
