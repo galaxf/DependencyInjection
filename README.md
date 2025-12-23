@@ -305,6 +305,18 @@ Feel free to enhance this tutorial by:
 - Creating unit tests
 - Adding error handling patterns
 
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+The MIT License is a permissive open-source license that allows you to:
+- ✅ Use this project for commercial purposes
+- ✅ Modify the code
+- ✅ Distribute the software
+- ✅ Use it privately
+
+The only requirement is to include a copy of the license and copyright notice.
+
 ---
 
 **Last Updated:** December 2025
