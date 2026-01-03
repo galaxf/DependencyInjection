@@ -323,7 +323,7 @@ Created by **Subrata Mohanta**
 
 Connect with me on:
 - 🔗 **LinkedIn:** [linkedin.com/in/subratamohanta](https://linkedin.com/in/subratamohanta)
-- 📺 **YouTube:** [@technicalodiyatoka](https://www.youtube.com/@technicalodiyatoka)
+- 📺 **YouTube:** [@technicalodiyatoka](https://www.youtube.com/@technicalodiatoka)
 - 💻 **GitHub:** [@subratamohanta](https://github.com/subratamohanta)
 
 Feel free to reach out, ask questions, or share feedback about this project!
