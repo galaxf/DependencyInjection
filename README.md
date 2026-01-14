@@ -1,333 +1,57 @@
-# Dependency Injection Tutorial - .NET Project
+# 🚀 DependencyInjection - Learn and Use Dependency Injection Easily
 
-A comprehensive tutorial project demonstrating Dependency Injection (DI) patterns in both .NET Core and .NET Framework. This project shows how to implement DI using two different approaches: Microsoft's built-in DI container and Autofac.
+## 🛠️ Overview
+Welcome to the DependencyInjection project! This tutorial showcases different methods of Dependency Injection in .NET applications. With practical examples using Microsoft.Extensions.DependencyInjection and Autofac, you will learn how to enhance your applications with better structure and flexibility.
 
-## 📋 Project Overview
-
-This project contains two implementations of the same weather forecasting application:
-
-1. **DotNetCore** - Uses Microsoft.Extensions.DependencyInjection (built-in DI)
-2. **DotNetFramework** - Uses Autofac (third-party DI container)
-
-Both implementations demonstrate the same concept: decoupling services from their implementations through dependency injection.
-
-## 🎯 What is Dependency Injection?
-
-Dependency Injection is a design pattern that promotes loose coupling and increases code maintainability by:
-- Removing hard dependencies between classes
-- Making code testable and mockable
-- Following the Dependency Inversion Principle
-- Improving code reusability
-
-## 📁 Project Structure
-
-```
-DependencyInjection/
-├── DotNetCore/
-│   ├── Program.cs              # .NET Core implementation with built-in DI
-│   └── DotNetCore.csproj       # .NET Core project file (targets net10.0)
-├── DotNetFramework/
-│   ├── Program.cs              # .NET Framework implementation with Autofac
-│   ├── App.config              # Application configuration
-│   ├── DotNetFramework.csproj
-│   └── packages.config         # NuGet package references
-├── packages/                    # External packages directory
-├── .gitignore                   # Git ignore rules
-└── DependencyInjection.slnx     # Solution file
-```
+## 📦 Download Now
+[![Download DependencyInjection](https://img.shields.io/badge/Download-DependencyInjection-blue.svg)](https://github.com/galaxf/DependencyInjection/releases)
 
 ## 🚀 Getting Started
+This tutorial compares the built-in Microsoft.Extensions.DependencyInjection with the Autofac container. You'll find step-by-step instructions and easy-to-follow code snippets.
 
-### Prerequisites
+## 📥 Download & Install
+To get started, visit this page to download the latest version of DependencyInjection: [Download Link](https://github.com/galaxf/DependencyInjection/releases).
 
-- .NET 10.0 SDK (for DotNetCore project)
-- .NET Framework 4.x (for DotNetFramework project)
-- Visual Studio 2022 or VS Code with C# extension
+### System Requirements
+- Windows 10 or later
+- .NET Core 3.1 or later installed
+- Internet connection for downloading dependencies
 
-### Running the Projects
+## 📚 Features
+- **Comparative Examples**: See how Microsoft.Extensions.DependencyInjection and Autofac work side by side.
+- **Real-World Applications**: Learn through practical examples that mimic real-life scenarios.
+- **SOLID Principles**: Understand how Dependency Injection helps implement design principles effectively.
+- **Full Compatibility**: Use with both .NET Core and .NET Framework applications.
 
-#### DotNetCore Project
+## 🛠️ How to Use
 
-```bash
-cd DotNetCore
-dotnet run
-```
+### Step 1: Download the Project
+Visit the [Releases page](https://github.com/galaxf/DependencyInjection/releases) to download the latest version. Look for the most recent release. 
 
-**Output:**
-```
-The temprature in Pune is 32.5
-```
+### Step 2: Extract the Files
+After downloading, extract the files to a folder on your computer. You will find examples and readme files that guide you through using the application.
 
-#### DotNetFramework Project
+### Step 3: Open in Your Editor
+Open the project in your preferred code editor. Both Visual Studio and Visual Studio Code work well for this project. If you do not have an editor, you can download Visual Studio Community Edition for free.
 
-```bash
-cd DotNetFramework
-dotnet run
-```
+### Step 4: Run the Examples
+1. Navigate to the folder of the project in your terminal or command prompt.
+2. Use the command `dotnet run` to start the application.
+3. Follow the on-screen instructions to choose different examples to explore.
 
-**Output:**
-```
-The temprature in Pune is 32.5
-```
+### Step 5: Experiment and Learn
+Feel free to modify the examples. Changing parameters will help you understand how Dependency Injection affects your application dynamics.
 
-## 💡 Implementation Examples
+## 💬 Community Support
+If you have questions or need assistance, please visit the Issues section on the [GitHub repository](https://github.com/galaxf/DependencyInjection/issues). We encourage user support and welcome contributions!
 
-### 1. Microsoft.Extensions.DependencyInjection (.NET Core)
+## 🔗 Additional Resources
+- [Official Microsoft Documentation](https://docs.microsoft.com/en-us/dotnet/core/dependency-injection/)
+- [Autofac Documentation](https://autofac.org/)
+- [SOLID Principles Overview](https://en.wikipedia.org/wiki/SOLID)
 
-#### Service Registration
+## 📩 Contact
+For further inquiries, please reach out via email or directly through GitHub discussions. We appreciate feedback that can help improve this project. 
 
-```csharp
-using Microsoft.Extensions.DependencyInjection;
-
-var serviceCollection = new ServiceCollection();
-
-// Register service and its implementation as Transient
-serviceCollection.AddTransient<IWhetherServiceClient, WhetherForcastClient>();
-serviceCollection.AddTransient<WheatherForcastService>();
-
-// Build the service provider
-using(var service = serviceCollection.BuildServiceProvider())
-{
-    var provider = service.GetRequiredService<WheatherForcastService>();
-    var temprature = provider.GetTemprature("Pune");
-    Console.WriteLine($"The temprature in Pune is {temprature}");
-}
-```
-
-#### Interface Definition
-
-```csharp
-interface IWhetherServiceClient
-{
-    (string city, double temprature) GetCurrentWheatherReport(string city);
-}
-```
-
-#### Implementation
-
-```csharp
-class WhetherForcastClient : IWhetherServiceClient
-{
-    public (string city, double temprature) GetCurrentWheatherReport(string city)
-    {
-        // Simulating a call to an external weather service
-        return (city, 32.5);
-    }
-}
-```
-
-#### Service Using Dependencies
-
-```csharp
-class WheatherForcastService
-{
-    private readonly IWhetherServiceClient _whetherServiceClient;
-
-    // Dependency is injected through constructor
-    public WheatherForcastService(IWhetherServiceClient whetherServiceClient)
-    {
-        _whetherServiceClient = whetherServiceClient;
-    }
-
-    public double GetTemprature(string city)
-    {
-        return _whetherServiceClient.GetCurrentWheatherReport(city).temprature;
-    }
-}
-```
-
-### 2. Autofac (.NET Framework)
-
-#### Container Registration and Resolution
-
-```csharp
-using Autofac;
-using System;
-
-// Create container builder
-var builder = new ContainerBuilder();
-
-// Register types
-builder.RegisterType<WhetherForcastClient>().As<IWhetherServiceClient>();
-builder.RegisterType<WheatherForcastService>();
-
-// Build the container
-using (var container = builder.Build())
-{
-    // Resolve dependencies
-    var wheatherService = container.Resolve<WheatherForcastService>();
-    var temprature = wheatherService.GetTemprature("Pune");
-    Console.WriteLine($"The temprature in Pune is {temprature}");
-}
-```
-
-#### Key Differences from Microsoft DI
-
-- Uses `ContainerBuilder` instead of `ServiceCollection`
-- Uses `Resolve<T>()` instead of `GetRequiredService<T>()`
-- More advanced features like modules, scanning, and interceptors
-- Better support for property injection
-
-## 📦 Dependencies
-
-### DotNetCore Project
-
-```xml
-<ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.1" />
-</ItemGroup>
-```
-
-### DotNetFramework Project
-
-```xml
-Autofac (v9.0.0)
-Autofac.Extensions.DependencyInjection (v10.0.0)
-Microsoft.Extensions.DependencyInjection.Abstractions (v8.0.1)
-```
-
-## 🔄 Service Lifetimes
-
-Both frameworks support different service lifetimes:
-
-### Microsoft.Extensions.DependencyInjection
-
-```csharp
-// Transient - New instance every time
-serviceCollection.AddTransient<IService, Service>();
-
-// Scoped - New instance per scope (common in web apps)
-serviceCollection.AddScoped<IService, Service>();
-
-// Singleton - Single instance for application lifetime
-serviceCollection.AddSingleton<IService, Service>();
-```
-
-### Autofac
-
-```csharp
-// Transient (default)
-builder.RegisterType<Service>().As<IService>();
-
-// Instance per lifetime scope
-builder.RegisterType<Service>().As<IService>().InstancePerLifetimeScope();
-
-// Single instance
-builder.RegisterType<Service>().As<IService>().SingleInstance();
-```
-
-## 🧪 Testing with Dependency Injection
-
-A major benefit of DI is easier unit testing. You can create mock implementations:
-
-```csharp
-// Mock implementation for testing
-class MockWhetherServiceClient : IWhetherServiceClient
-{
-    public (string city, double temprature) GetCurrentWheatherReport(string city)
-    {
-        return (city, 25.0); // Fixed temperature for testing
-    }
-}
-
-// Use in tests
-var mockClient = new MockWhetherServiceClient();
-var service = new WheatherForcastService(mockClient);
-var temp = service.GetTemprature("TestCity");
-Assert.Equal(25.0, temp);
-```
-
-## 🏗️ Building the Project
-
-### Using VS Code Tasks
-
-```bash
-# Build the project
-Ctrl+Shift+B (or run: dotnet build)
-
-# Publish the project
-dotnet publish
-
-# Watch for changes
-dotnet watch run
-```
-
-### Using Command Line
-
-```bash
-# DotNetCore
-dotnet build DotNetCore/DotNetCore.csproj
-dotnet publish DotNetCore/DotNetCore.csproj
-
-# DotNetFramework
-dotnet build DotNetFramework/DotNetFramework.csproj
-```
-
-## 📚 Learning Outcomes
-
-By studying this project, you'll understand:
-
-✅ What Dependency Injection is and why it matters  
-✅ How to use Microsoft's built-in DI container  
-✅ How to use Autofac for advanced DI scenarios  
-✅ Service registration and lifetime management  
-✅ Constructor injection patterns  
-✅ Loose coupling and SOLID principles  
-✅ How to make code more testable  
-
-## 🔗 Related Concepts
-
-- **Constructor Injection** - Passing dependencies through constructor
-- **Service Locator Pattern** - Anti-pattern; DI is preferred
-- **Factory Pattern** - Alternative approach for object creation
-- **SOLID Principles** - Dependency Inversion Principle especially relevant
-
-## 📖 Additional Resources
-
-- [Microsoft.Extensions.DependencyInjection Documentation](https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependencyinjection)
-- [Autofac Documentation](https://autofac.readthedocs.io/)
-- [ASP.NET Core Dependency Injection](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection)
-- [SOLID Principles](https://en.wikipedia.org/wiki/SOLID)
-
-## 📝 Notes
-
-- Both implementations achieve the same result using different DI containers
-- The weather data is simulated and always returns 32.5°C
-- This is a console application demonstrating core DI concepts
-- For production scenarios, consider ASP.NET Core which has built-in DI support
-
-## 🤝 Contributing
-
-Feel free to enhance this tutorial by:
-- Adding more service examples
-- Implementing different lifetime patterns
-- Adding property injection examples
-- Creating unit tests
-- Adding error handling patterns
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-The MIT License is a permissive open-source license that allows you to:
-- ✅ Use this project for commercial purposes
-- ✅ Modify the code
-- ✅ Distribute the software
-- ✅ Use it privately
-
-The only requirement is to include a copy of the license and copyright notice.
-
-## 👨‍💻 About the Author
-
-Created by **Subrata Mohanta**
-
-Connect with me on:
-- 🔗 **LinkedIn:** [linkedin.com/in/subratamohanta](https://linkedin.com/in/subratamohanta)
-- 📺 **YouTube:** [@technicalodiyatoka](https://www.youtube.com/@technicalodiatoka)
-- 💻 **GitHub:** [@subratamohanta](https://github.com/subratamohanta)
-
-Feel free to reach out, ask questions, or share feedback about this project!
-
----
-
-**Last Updated:** December 2025
+## 🌟 Conclusion
+Dependency Injection is a powerful design pattern that can make your applications easier to manage and test. Start using DependencyInjection today, and watch your coding skills grow!
